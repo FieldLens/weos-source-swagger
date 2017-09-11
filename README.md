@@ -1,0 +1,1 @@
+# weos-source-swagger

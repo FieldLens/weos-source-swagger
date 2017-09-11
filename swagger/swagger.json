@@ -1,0 +1,248 @@
+{
+  "swagger" : "2.0",
+  "info" : {
+    "description" : "WeOS Source",
+    "version" : "1.0",
+    "title" : "WeOS Source"
+  },
+  "host" : "virtserver.swaggerhub.com",
+  "basePath" : "/WeWork/weos-source/1.0",
+  "schemes" : [ "https" ],
+  "paths" : {
+    "/site_search/list" : {
+      "get" : {
+        "tags" : [ "SiteSearch" ],
+        "description" : "Get a list of site searches",
+        "parameters" : [ ],
+        "responses" : {
+          "200" : {
+            "description" : "List of site searches"
+          }
+        }
+      }
+    },
+    "/site_search/count" : {
+      "get" : {
+        "tags" : [ "SiteSearch" ],
+        "description" : "Get a count of site searches",
+        "parameters" : [ ],
+        "responses" : {
+          "200" : {
+            "description" : "List of site searches"
+          }
+        }
+      }
+    },
+    "/site_search/{siteSearchId}" : {
+      "get" : {
+        "tags" : [ "SiteSearch" ],
+        "description" : "Returns a single site search.",
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "name" : "siteSearchId",
+          "in" : "path",
+          "description" : "ID of site search to return",
+          "required" : true,
+          "type" : "integer",
+          "format" : "int64"
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "successful operation"
+          },
+          "400" : {
+            "description" : "Invalid ID supplied"
+          },
+          "404" : {
+            "description" : "Site search not found"
+          }
+        }
+      },
+      "put" : {
+        "tags" : [ "SiteSearch" ],
+        "description" : "Update a site search",
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "name" : "siteSearchId",
+          "in" : "path",
+          "description" : "ID of site search to return",
+          "required" : true,
+          "type" : "integer",
+          "format" : "int64"
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "successful operation"
+          },
+          "400" : {
+            "description" : "Invalid ID supplied"
+          },
+          "404" : {
+            "description" : "Site search not found"
+          }
+        }
+      }
+    },
+    "/site_search" : {
+      "post" : {
+        "tags" : [ "SiteSearch" ],
+        "description" : "Create a new site search",
+        "produces" : [ "application/json" ],
+        "parameters" : [ ],
+        "responses" : {
+          "200" : {
+            "description" : "successful operation"
+          },
+          "400" : {
+            "description" : "Invalid ID supplied"
+          },
+          "404" : {
+            "description" : "Site search not found"
+          }
+        }
+      }
+    },
+    "/site" : {
+      "post" : {
+        "tags" : [ "Site" ],
+        "description" : "Create a new site search",
+        "produces" : [ "application/json" ],
+        "parameters" : [ ],
+        "responses" : {
+          "200" : {
+            "description" : "successful operation"
+          },
+          "400" : {
+            "description" : "Invalid ID supplied"
+          },
+          "404" : {
+            "description" : "Site search not found"
+          }
+        }
+      }
+    },
+    "/site/{siteId}" : {
+      "get" : {
+        "tags" : [ "Site" ],
+        "description" : "Get a site by id",
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "name" : "siteId",
+          "in" : "path",
+          "description" : "ID of site to return",
+          "required" : true,
+          "type" : "integer",
+          "format" : "int64"
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "successful operation"
+          },
+          "400" : {
+            "description" : "Invalid ID supplied"
+          },
+          "404" : {
+            "description" : "Site not found"
+          }
+        }
+      },
+      "put" : {
+        "tags" : [ "Site" ],
+        "description" : "Update a site by id",
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "name" : "siteId",
+          "in" : "path",
+          "description" : "ID of site to return",
+          "required" : true,
+          "type" : "integer",
+          "format" : "int64"
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "successful operation"
+          },
+          "400" : {
+            "description" : "Invalid ID supplied"
+          },
+          "404" : {
+            "description" : "Site not found"
+          }
+        }
+      }
+    }
+  },
+  "definitions" : {
+    "SiteSearch" : {
+      "type" : "object",
+      "properties" : {
+        "name" : {
+          "type" : "string",
+          "description" : "Name of the site search"
+        },
+        "sites" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "#/definitions/Site"
+          }
+        },
+        "collaborators" : {
+          "type" : "array",
+          "description" : "List of people who have been invited to participate in this search",
+          "items" : {
+            "type" : "string",
+            "description" : "Email address of user"
+          }
+        }
+      },
+      "description" : "Site search root entity"
+    },
+    "Location" : {
+      "type" : "object",
+      "properties" : {
+        "id" : {
+          "type" : "string",
+          "description" : "Google unique location id"
+        },
+        "description" : {
+          "type" : "string",
+          "description" : "Human readable address"
+        }
+      }
+    },
+    "Site" : {
+      "type" : "object",
+      "properties" : {
+        "location" : {
+          "$ref" : "#/definitions/Location"
+        },
+        "name" : {
+          "type" : "string",
+          "description" : "Name of the site"
+        },
+        "description" : {
+          "type" : "string",
+          "description" : "Description of the site"
+        },
+        "floors" : {
+          "type" : "integer",
+          "description" : "Number of floors at this site"
+        },
+        "area" : {
+          "type" : "string",
+          "description" : "Total area of this site"
+        },
+        "areaMetric" : {
+          "type" : "string",
+          "description" : "Area metric for this site",
+          "enum" : [ "imperial", "metric" ]
+        },
+        "dealState" : {
+          "type" : "string",
+          "description" : "State of the deal at this site",
+          "enum" : [ "to_review", "in_consideration", "initiated", "rejected" ]
+        }
+      }
+    }
+  }
+}

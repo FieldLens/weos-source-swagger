@@ -16,7 +16,11 @@
         "parameters" : [ ],
         "responses" : {
           "200" : {
-            "description" : "List of site searches"
+            "description" : "List of site searches",
+            "schema" : {
+              "type" : "object",
+              "properties" : { }
+            }
           }
         }
       }
@@ -28,7 +32,10 @@
         "parameters" : [ ],
         "responses" : {
           "200" : {
-            "description" : "List of site searches"
+            "description" : "List of site searches",
+            "schema" : {
+              "$ref" : "#/definitions/SiteSearchListCount"
+            }
           }
         }
       }
@@ -173,18 +180,26 @@
     }
   },
   "definitions" : {
-    "ErrorObject" : {
+    "SiteSearchListResponse" : {
       "type" : "object",
       "properties" : {
-        "code" : {
-          "type" : "integer"
-        },
-        "data" : {
-          "type" : "object",
-          "properties" : { }
+        "list" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "#/definitions/SiteSearch"
+          }
         }
       },
-      "description" : "Envelope"
+      "description" : "SiteSearchListResponse"
+    },
+    "SiteSearchListCount" : {
+      "type" : "object",
+      "properties" : {
+        "count" : {
+          "type" : "number"
+        }
+      },
+      "description" : "SiteSearchListResponse"
     },
     "SiteSearch" : {
       "type" : "object",

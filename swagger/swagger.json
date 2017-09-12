@@ -33,7 +33,7 @@
           "200" : {
             "description" : "List of site searches",
             "schema" : {
-              "$ref" : "#/definitions/SiteSearchListCount"
+              "$ref" : "#/definitions/SiteSearchCountResponse"
             }
           }
         }
@@ -191,7 +191,7 @@
       },
       "description" : "SiteSearchListResponse"
     },
-    "SiteSearchListCount" : {
+    "SiteSearchCountResponse" : {
       "type" : "object",
       "properties" : {
         "count" : {

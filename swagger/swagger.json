@@ -18,8 +18,7 @@
           "200" : {
             "description" : "List of site searches",
             "schema" : {
-              "type" : "object",
-              "properties" : { }
+              "$ref" : "#/definitions/SiteSearchListResponse"
             }
           }
         }

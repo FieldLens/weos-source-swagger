@@ -173,6 +173,19 @@
     }
   },
   "definitions" : {
+    "ErrorObject" : {
+      "type" : "object",
+      "properties" : {
+        "code" : {
+          "type" : "integer"
+        },
+        "data" : {
+          "type" : "object",
+          "properties" : { }
+        }
+      },
+      "description" : "Envelope"
+    },
     "SiteSearch" : {
       "type" : "object",
       "properties" : {

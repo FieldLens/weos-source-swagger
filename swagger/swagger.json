@@ -13,6 +13,7 @@
       "get" : {
         "tags" : [ "SiteSearch" ],
         "description" : "Get a list of site searches",
+        "operationId" : "getSiteSearchList",
         "parameters" : [ ],
         "responses" : {
           "200" : {
@@ -28,6 +29,7 @@
       "get" : {
         "tags" : [ "SiteSearch" ],
         "description" : "Get a count of site searches",
+        "operationId" : "getSiteSearchCount",
         "parameters" : [ ],
         "responses" : {
           "200" : {
@@ -314,11 +316,14 @@
           "enum" : [ "imperial", "metric" ]
         },
         "dealState" : {
-          "type" : "string",
-          "description" : "State of the deal at this site",
-          "enum" : [ "to_review", "in_consideration", "initiated", "rejected" ]
+          "$ref" : "#/definitions/DealState"
         }
       }
+    },
+    "DealState" : {
+      "type" : "string",
+      "description" : "State of the deal at this site",
+      "enum" : [ "to_review", "in_consideration", "initiated", "rejected" ]
     }
   }
 }

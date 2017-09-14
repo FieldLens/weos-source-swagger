@@ -211,7 +211,7 @@
     },
     "Survey" : {
       "type" : "object",
-      "required" : [ "collaborators", "name", "sites" ],
+      "required" : [ "collaborators", "id", "name", "sites" ],
       "properties" : {
         "id" : {
           "type" : "string",
@@ -245,6 +245,11 @@
       "type" : "object",
       "required" : [ "name" ],
       "properties" : {
+        "id" : {
+          "type" : "string",
+          "format" : "guid",
+          "description" : "Unique id for this survey"
+        },
         "name" : {
           "type" : "string",
           "description" : "Name of the site search",
@@ -294,6 +299,11 @@
       "type" : "object",
       "required" : [ "dealState", "location", "name" ],
       "properties" : {
+        "id" : {
+          "type" : "string",
+          "format" : "guid",
+          "description" : "Unique id for this survey"
+        },
         "location" : {
           "$ref" : "#/definitions/Location"
         },

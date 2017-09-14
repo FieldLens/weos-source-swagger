@@ -168,14 +168,32 @@
     }
   },
   "definitions" : {
+    "ArrayOfSiteSearches" : {
+      "type" : "array",
+      "description" : "List of site searches",
+      "items" : {
+        "$ref" : "#/definitions/SiteSearch"
+      }
+    },
+    "ArrayOfSites" : {
+      "type" : "array",
+      "description" : "List of sites",
+      "items" : {
+        "$ref" : "#/definitions/Site"
+      }
+    },
+    "ArrayOfSurveys" : {
+      "type" : "array",
+      "description" : "List of surveys",
+      "items" : {
+        "$ref" : "#/definitions/Survey"
+      }
+    },
     "SiteSearchListResponse" : {
       "type" : "object",
       "properties" : {
         "list" : {
-          "type" : "array",
-          "items" : {
-            "$ref" : "#/definitions/SiteSearch"
-          }
+          "$ref" : "#/definitions/ArrayOfSiteSearches"
         }
       },
       "description" : "SiteSearchListResponse"
@@ -189,12 +207,14 @@
       },
       "description" : "SiteSearchListResponse"
     },
-    "SiteSearch" : {
+    "Survey" : {
       "type" : "object",
+      "required" : [ "collaborators", "name", "sites" ],
       "properties" : {
         "name" : {
           "type" : "string",
-          "description" : "Name of the site search"
+          "description" : "Name of the survey",
+          "maxLength" : 128
         },
         "sites" : {
           "type" : "array",
@@ -204,10 +224,44 @@
         },
         "collaborators" : {
           "type" : "array",
-          "description" : "List of people who have been invited to participate in this search",
+          "description" : "List of people who have been invited to participate in this search.  These people can only see this survey.",
           "items" : {
             "type" : "string",
-            "description" : "Email address of user"
+            "description" : "Email address of user",
+            "maxLength" : 128
+          }
+        }
+      },
+      "description" : "Site Search Survey"
+    },
+    "SiteSearch" : {
+      "type" : "object",
+      "required" : [ "name" ],
+      "properties" : {
+        "name" : {
+          "type" : "string",
+          "description" : "Name of the site search",
+          "maxLength" : 128
+        },
+        "description" : {
+          "type" : "string",
+          "description" : "Description of the site search",
+          "maxLength" : 65536
+        },
+        "collaborators" : {
+          "type" : "array",
+          "description" : "List of people who have been invited to participate in this search.  These people can see all surveys in the site search.",
+          "items" : {
+            "type" : "string",
+            "description" : "Email address of user",
+            "maxLength" : 128
+          }
+        },
+        "surveys" : {
+          "type" : "array",
+          "description" : "List of surveys in this site search",
+          "items" : {
+            "$ref" : "#/definitions/Survey"
           }
         }
       },
@@ -215,26 +269,31 @@
     },
     "Location" : {
       "type" : "object",
+      "required" : [ "description", "id" ],
       "properties" : {
         "id" : {
           "type" : "string",
-          "description" : "Google unique location id"
+          "description" : "Google unique location id",
+          "maxLength" : 256
         },
         "description" : {
           "type" : "string",
-          "description" : "Human readable address"
+          "description" : "Human readable address",
+          "maxLength" : 256
         }
       }
     },
     "Site" : {
       "type" : "object",
+      "required" : [ "dealState", "location", "name" ],
       "properties" : {
         "location" : {
           "$ref" : "#/definitions/Location"
         },
         "name" : {
           "type" : "string",
-          "description" : "Name of the site"
+          "description" : "Name of the site",
+          "maxLength" : 128
         },
         "description" : {
           "type" : "string",
@@ -242,7 +301,8 @@
         },
         "floors" : {
           "type" : "integer",
-          "description" : "Number of floors at this site"
+          "description" : "Number of floors at this site",
+          "minimum" : 1
         },
         "area" : {
           "type" : "string",

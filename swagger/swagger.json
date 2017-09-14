@@ -213,6 +213,11 @@
       "type" : "object",
       "required" : [ "collaborators", "name", "sites" ],
       "properties" : {
+        "id" : {
+          "type" : "string",
+          "format" : "guid",
+          "description" : "Unique id for this survey"
+        },
         "name" : {
           "type" : "string",
           "description" : "Name of the survey",

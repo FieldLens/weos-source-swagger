@@ -215,7 +215,7 @@
       "properties" : {
         "id" : {
           "type" : "string",
-          "format" : "guid",
+          "format" : "uuid",
           "description" : "Unique id for this survey"
         },
         "name" : {
@@ -247,7 +247,7 @@
       "properties" : {
         "id" : {
           "type" : "string",
-          "format" : "guid",
+          "format" : "uuid",
           "description" : "Unique id for this survey"
         },
         "name" : {
@@ -301,7 +301,7 @@
       "properties" : {
         "id" : {
           "type" : "string",
-          "format" : "guid",
+          "format" : "uuid",
           "description" : "Unique id for this survey"
         },
         "location" : {

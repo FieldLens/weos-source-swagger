@@ -61,6 +61,14 @@
           "required" : true,
           "type" : "string",
           "format" : "uuid"
+        }, {
+          "in" : "body",
+          "name" : "body",
+          "description" : "SiteSearch object to be updated",
+          "required" : true,
+          "schema" : {
+            "$ref" : "#/definitions/SiteSearch"
+          }
         } ],
         "responses" : {
           "200" : {

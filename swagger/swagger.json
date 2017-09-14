@@ -21,6 +21,30 @@
             "schema" : {
               "$ref" : "#/definitions/SiteSearchListResponse"
             }
+          },
+          "400" : {
+            "description" : "Bad request",
+            "schema" : {
+              "$ref" : "#/definitions/ResponseError"
+            }
+          },
+          "401" : {
+            "description" : "Unauthorized (authentication required)",
+            "schema" : {
+              "$ref" : "#/definitions/ResponseError"
+            }
+          },
+          "404" : {
+            "description" : "Not found",
+            "schema" : {
+              "$ref" : "#/definitions/ResponseError"
+            }
+          },
+          "500" : {
+            "description" : "Internal Server Error",
+            "schema" : {
+              "$ref" : "#/definitions/ResponseError"
+            }
           }
         }
       }
@@ -44,6 +68,30 @@
             "description" : "ok",
             "schema" : {
               "$ref" : "#/definitions/SiteSearch"
+            }
+          },
+          "400" : {
+            "description" : "Bad request",
+            "schema" : {
+              "$ref" : "#/definitions/ResponseError"
+            }
+          },
+          "401" : {
+            "description" : "Unauthorized (authentication required)",
+            "schema" : {
+              "$ref" : "#/definitions/ResponseError"
+            }
+          },
+          "404" : {
+            "description" : "Not found",
+            "schema" : {
+              "$ref" : "#/definitions/ResponseError"
+            }
+          },
+          "500" : {
+            "description" : "Internal Server Error",
+            "schema" : {
+              "$ref" : "#/definitions/ResponseError"
             }
           }
         }
@@ -76,6 +124,30 @@
             "schema" : {
               "$ref" : "#/definitions/SiteSearch"
             }
+          },
+          "400" : {
+            "description" : "Bad request",
+            "schema" : {
+              "$ref" : "#/definitions/ResponseError"
+            }
+          },
+          "401" : {
+            "description" : "Unauthorized (authentication required)",
+            "schema" : {
+              "$ref" : "#/definitions/ResponseError"
+            }
+          },
+          "404" : {
+            "description" : "Not found",
+            "schema" : {
+              "$ref" : "#/definitions/ResponseError"
+            }
+          },
+          "500" : {
+            "description" : "Internal Server Error",
+            "schema" : {
+              "$ref" : "#/definitions/ResponseError"
+            }
           }
         }
       }
@@ -101,6 +173,24 @@
             "description" : "ok",
             "schema" : {
               "$ref" : "#/definitions/SiteSearch"
+            }
+          },
+          "400" : {
+            "description" : "Bad request",
+            "schema" : {
+              "$ref" : "#/definitions/ResponseError"
+            }
+          },
+          "401" : {
+            "description" : "Unauthorized (authentication required)",
+            "schema" : {
+              "$ref" : "#/definitions/ResponseError"
+            }
+          },
+          "500" : {
+            "description" : "Internal Server Error",
+            "schema" : {
+              "$ref" : "#/definitions/ResponseError"
             }
           }
         }
@@ -134,6 +224,30 @@
             "schema" : {
               "$ref" : "#/definitions/Site"
             }
+          },
+          "400" : {
+            "description" : "Bad request",
+            "schema" : {
+              "$ref" : "#/definitions/ResponseError"
+            }
+          },
+          "401" : {
+            "description" : "Unauthorized (authentication required)",
+            "schema" : {
+              "$ref" : "#/definitions/ResponseError"
+            }
+          },
+          "404" : {
+            "description" : "Not found",
+            "schema" : {
+              "$ref" : "#/definitions/ResponseError"
+            }
+          },
+          "500" : {
+            "description" : "Internal Server Error",
+            "schema" : {
+              "$ref" : "#/definitions/ResponseError"
+            }
           }
         }
       }
@@ -157,6 +271,30 @@
             "description" : "successful operation",
             "schema" : {
               "$ref" : "#/definitions/Site"
+            }
+          },
+          "400" : {
+            "description" : "Bad request",
+            "schema" : {
+              "$ref" : "#/definitions/ResponseError"
+            }
+          },
+          "401" : {
+            "description" : "Unauthorized (authentication required)",
+            "schema" : {
+              "$ref" : "#/definitions/ResponseError"
+            }
+          },
+          "404" : {
+            "description" : "Not found",
+            "schema" : {
+              "$ref" : "#/definitions/ResponseError"
+            }
+          },
+          "500" : {
+            "description" : "Internal Server Error",
+            "schema" : {
+              "$ref" : "#/definitions/ResponseError"
             }
           }
         }
@@ -188,6 +326,30 @@
             "schema" : {
               "$ref" : "#/definitions/Site"
             }
+          },
+          "400" : {
+            "description" : "Bad request",
+            "schema" : {
+              "$ref" : "#/definitions/ResponseError"
+            }
+          },
+          "401" : {
+            "description" : "Unauthorized (authentication required)",
+            "schema" : {
+              "$ref" : "#/definitions/ResponseError"
+            }
+          },
+          "404" : {
+            "description" : "Not found",
+            "schema" : {
+              "$ref" : "#/definitions/ResponseError"
+            }
+          },
+          "500" : {
+            "description" : "Internal Server Error",
+            "schema" : {
+              "$ref" : "#/definitions/ResponseError"
+            }
           }
         }
       }
@@ -211,6 +373,30 @@
             "description" : "ok",
             "schema" : {
               "$ref" : "#/definitions/ArrayOfSurveys"
+            }
+          },
+          "400" : {
+            "description" : "Bad request",
+            "schema" : {
+              "$ref" : "#/definitions/ResponseError"
+            }
+          },
+          "401" : {
+            "description" : "Unauthorized (authentication required)",
+            "schema" : {
+              "$ref" : "#/definitions/ResponseError"
+            }
+          },
+          "404" : {
+            "description" : "Not found",
+            "schema" : {
+              "$ref" : "#/definitions/ResponseError"
+            }
+          },
+          "500" : {
+            "description" : "Internal Server Error",
+            "schema" : {
+              "$ref" : "#/definitions/ResponseError"
             }
           }
         }
@@ -245,6 +431,30 @@
             "schema" : {
               "$ref" : "#/definitions/Survey"
             }
+          },
+          "400" : {
+            "description" : "Bad request",
+            "schema" : {
+              "$ref" : "#/definitions/ResponseError"
+            }
+          },
+          "401" : {
+            "description" : "Unauthorized (authentication required)",
+            "schema" : {
+              "$ref" : "#/definitions/ResponseError"
+            }
+          },
+          "404" : {
+            "description" : "Not found",
+            "schema" : {
+              "$ref" : "#/definitions/ResponseError"
+            }
+          },
+          "500" : {
+            "description" : "Internal Server Error",
+            "schema" : {
+              "$ref" : "#/definitions/ResponseError"
+            }
           }
         }
       }
@@ -268,6 +478,30 @@
             "description" : "ok",
             "schema" : {
               "$ref" : "#/definitions/Survey"
+            }
+          },
+          "400" : {
+            "description" : "Bad request",
+            "schema" : {
+              "$ref" : "#/definitions/ResponseError"
+            }
+          },
+          "401" : {
+            "description" : "Unauthorized (authentication required)",
+            "schema" : {
+              "$ref" : "#/definitions/ResponseError"
+            }
+          },
+          "404" : {
+            "description" : "Not found",
+            "schema" : {
+              "$ref" : "#/definitions/ResponseError"
+            }
+          },
+          "500" : {
+            "description" : "Internal Server Error",
+            "schema" : {
+              "$ref" : "#/definitions/ResponseError"
             }
           }
         }
@@ -299,6 +533,30 @@
             "description" : "ok",
             "schema" : {
               "$ref" : "#/definitions/Survey"
+            }
+          },
+          "400" : {
+            "description" : "Bad request",
+            "schema" : {
+              "$ref" : "#/definitions/ResponseError"
+            }
+          },
+          "401" : {
+            "description" : "Unauthorized (authentication required)",
+            "schema" : {
+              "$ref" : "#/definitions/ResponseError"
+            }
+          },
+          "404" : {
+            "description" : "Not found",
+            "schema" : {
+              "$ref" : "#/definitions/ResponseError"
+            }
+          },
+          "500" : {
+            "description" : "Internal Server Error",
+            "schema" : {
+              "$ref" : "#/definitions/ResponseError"
             }
           }
         }
@@ -335,6 +593,18 @@
         }
       },
       "description" : "SiteSearchListResponse"
+    },
+    "ResponseError" : {
+      "type" : "object",
+      "properties" : {
+        "messageCode" : {
+          "type" : "string"
+        },
+        "message" : {
+          "type" : "string"
+        }
+      },
+      "description" : "Response Error"
     },
     "Survey" : {
       "type" : "object",

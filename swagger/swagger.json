@@ -87,7 +87,15 @@
         "operationId" : "createSiteSearch",
         "consumes" : [ "application/json" ],
         "produces" : [ "application/json" ],
-        "parameters" : [ ],
+        "parameters" : [ {
+          "in" : "body",
+          "name" : "body",
+          "description" : "SiteSearch object to be updated",
+          "required" : true,
+          "schema" : {
+            "$ref" : "#/definitions/SiteSearch"
+          }
+        } ],
         "responses" : {
           "200" : {
             "description" : "ok",

@@ -17,25 +17,9 @@
         "parameters" : [ ],
         "responses" : {
           "200" : {
-            "description" : "List of site searches",
+            "description" : "ok",
             "schema" : {
               "$ref" : "#/definitions/SiteSearchListResponse"
-            }
-          }
-        }
-      }
-    },
-    "/site_search/count" : {
-      "get" : {
-        "tags" : [ "SiteSearch" ],
-        "description" : "Get a count of site searches",
-        "operationId" : "getSiteSearchCount",
-        "parameters" : [ ],
-        "responses" : {
-          "200" : {
-            "description" : "List of site searches",
-            "schema" : {
-              "$ref" : "#/definitions/SiteSearchCountResponse"
             }
           }
         }
@@ -45,18 +29,19 @@
       "get" : {
         "tags" : [ "SiteSearch" ],
         "description" : "Returns a single site search.",
+        "operationId" : "getSiteSearchById",
         "produces" : [ "application/json" ],
         "parameters" : [ {
           "name" : "siteSearchId",
           "in" : "path",
-          "description" : "ID of site search to return",
+          "description" : "id of site search to return",
           "required" : true,
-          "type" : "integer",
-          "format" : "int64"
+          "type" : "string",
+          "format" : "uuid"
         } ],
         "responses" : {
           "200" : {
-            "description" : "successful operation",
+            "description" : "ok",
             "schema" : {
               "$ref" : "#/definitions/SiteSearch"
             }
@@ -66,18 +51,20 @@
       "put" : {
         "tags" : [ "SiteSearch" ],
         "description" : "Update a site search",
+        "operationId" : "updateSiteSearchById",
+        "consumes" : [ "application/json" ],
         "produces" : [ "application/json" ],
         "parameters" : [ {
           "name" : "siteSearchId",
           "in" : "path",
-          "description" : "ID of site search to return",
+          "description" : "id of site search to return",
           "required" : true,
-          "type" : "integer",
-          "format" : "int64"
+          "type" : "string",
+          "format" : "uuid"
         } ],
         "responses" : {
           "200" : {
-            "description" : "successful operation",
+            "description" : "ok",
             "schema" : {
               "$ref" : "#/definitions/SiteSearch"
             }
@@ -89,11 +76,13 @@
       "post" : {
         "tags" : [ "SiteSearch" ],
         "description" : "Create a new site search",
+        "operationId" : "createSiteSearch",
+        "consumes" : [ "application/json" ],
         "produces" : [ "application/json" ],
         "parameters" : [ ],
         "responses" : {
           "200" : {
-            "description" : "successful operation",
+            "description" : "ok",
             "schema" : {
               "$ref" : "#/definitions/SiteSearch"
             }
@@ -103,8 +92,9 @@
     },
     "/site_search/{siteSearchId}/site" : {
       "post" : {
-        "tags" : [ "Site" ],
+        "tags" : [ "Site", "SiteSearch" ],
         "description" : "Create a new site in this search",
+        "operationId" : "createSiteInSiteSearch",
         "produces" : [ "application/json" ],
         "parameters" : [ {
           "name" : "siteSearchId",

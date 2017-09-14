@@ -336,15 +336,6 @@
       },
       "description" : "SiteSearchListResponse"
     },
-    "SiteSearchCountResponse" : {
-      "type" : "object",
-      "properties" : {
-        "count" : {
-          "type" : "number"
-        }
-      },
-      "description" : "SiteSearchListResponse"
-    },
     "Survey" : {
       "type" : "object",
       "required" : [ "collaborators", "id", "name", "sites" ],
@@ -360,10 +351,7 @@
           "maxLength" : 128
         },
         "sites" : {
-          "type" : "array",
-          "items" : {
-            "$ref" : "#/definitions/Site"
-          }
+          "$ref" : "#/definitions/ArrayOfSites"
         },
         "collaborators" : {
           "type" : "array",

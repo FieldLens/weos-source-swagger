@@ -691,7 +691,7 @@
     },
     "Site" : {
       "type" : "object",
-      "required" : [ "dealState", "location", "name" ],
+      "required" : [ "location", "name" ],
       "properties" : {
         "id" : {
           "type" : "string",
@@ -724,14 +724,14 @@
           "description" : "Area metric for this site",
           "enum" : [ "imperial", "metric" ]
         },
-        "dealState" : {
-          "$ref" : "#/definitions/DealState"
+        "siteStatus" : {
+          "$ref" : "#/definitions/SiteStatus"
         }
       }
     },
-    "DealState" : {
+    "SiteStatus" : {
       "type" : "string",
-      "description" : "State of the deal at this site",
+      "description" : "Status of the site",
       "enum" : [ "to_review", "in_consideration", "initiated", "rejected" ]
     }
   }

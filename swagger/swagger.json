@@ -732,7 +732,7 @@
     "SiteStatus" : {
       "type" : "string",
       "description" : "Status of the site",
-      "enum" : [ "to_review", "in_consideration", "initiated", "rejected" ]
+      "enum" : [ "to_review", "in_consideration", "needs_more_info", "initiated", "rejected" ]
     }
   }
 }

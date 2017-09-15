@@ -615,6 +615,12 @@
           "format" : "uuid",
           "description" : "Unique id for this survey"
         },
+        "created" : {
+          "$ref" : "#/definitions/CreatorUpdater"
+        },
+        "updated" : {
+          "$ref" : "#/definitions/CreatorUpdater"
+        },
         "name" : {
           "type" : "string",
           "description" : "Name of the survey",
@@ -643,6 +649,12 @@
           "type" : "string",
           "format" : "uuid",
           "description" : "Unique id for this survey"
+        },
+        "created" : {
+          "$ref" : "#/definitions/CreatorUpdater"
+        },
+        "updated" : {
+          "$ref" : "#/definitions/CreatorUpdater"
         },
         "name" : {
           "type" : "string",
@@ -698,6 +710,12 @@
           "format" : "uuid",
           "description" : "Unique id for this survey"
         },
+        "created" : {
+          "$ref" : "#/definitions/CreatorUpdater"
+        },
+        "updated" : {
+          "$ref" : "#/definitions/CreatorUpdater"
+        },
         "location" : {
           "$ref" : "#/definitions/Location"
         },
@@ -728,6 +746,26 @@
           "$ref" : "#/definitions/SiteStatus"
         }
       }
+    },
+    "CreatorUpdater" : {
+      "type" : "object",
+      "properties" : {
+        "userId" : {
+          "type" : "string",
+          "format" : "uuid"
+        },
+        "firstName" : {
+          "type" : "string"
+        },
+        "lastName" : {
+          "type" : "string"
+        },
+        "timestamp" : {
+          "type" : "number",
+          "format" : "int64"
+        }
+      },
+      "description" : "Person who created this record"
     },
     "SiteStatus" : {
       "type" : "string",

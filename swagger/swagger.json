@@ -734,18 +734,27 @@
           "minimum" : 1
         },
         "area" : {
-          "type" : "string",
-          "description" : "Total area of this site"
-        },
-        "areaMetric" : {
-          "type" : "string",
-          "description" : "Area metric for this site",
-          "enum" : [ "imperial", "metric" ]
+          "$ref" : "#/definitions/Area"
         },
         "siteStatus" : {
           "$ref" : "#/definitions/SiteStatus"
         }
       }
+    },
+    "Area" : {
+      "type" : "object",
+      "properties" : {
+        "unit" : {
+          "type" : "string",
+          "description" : "Unit of measurement",
+          "enum" : [ "imperial", "metric" ]
+        },
+        "value" : {
+          "type" : "number",
+          "description" : "Value"
+        }
+      },
+      "description" : "Area"
     },
     "CreatorUpdater" : {
       "type" : "object",

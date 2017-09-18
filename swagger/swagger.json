@@ -633,10 +633,6 @@
         "$ref" : "#/definitions/Survey"
       }
     },
-    "NormalizedUsers" : {
-      "type" : "object",
-      "description" : "User"
-    },
     "SiteSearchListResponse" : {
       "type" : "object",
       "properties" : {
